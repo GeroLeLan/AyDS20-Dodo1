@@ -26,8 +26,13 @@ internal class HomeControllerImpl(
     }
 
     private fun onSearchMovieAction() {
+
         Thread {
-            homeModel.searchMovie(homeView.movieTitle)
+            try{
+                homeModel.searchMovie(homeView.movieTitle)
+            }catch(e: Exception ) {
+                homeView.error()
+            }
         }.start()
     }
 

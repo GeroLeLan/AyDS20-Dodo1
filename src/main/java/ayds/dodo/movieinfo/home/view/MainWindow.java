@@ -40,7 +40,10 @@ public class MainWindow implements HomeView {
     initListeners();
     initObservers();
   }
-
+  public void error(){
+    System.out.println("error");
+    JOptionPane.showMessageDialog(null,"ERROR");
+  }
   @Override
   public void openView() {
     JFrame frame = new JFrame(WINDOW_TITLE);
